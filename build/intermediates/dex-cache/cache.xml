@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="G:\Android\SDK\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\pre-dexed\debug\support-annotations-23.4.0_243d1fdede418e2be99e4cc44c5762cd464bcbe8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.4.0_87ff7ecadede5757713e8625ec172bb1ec3a4188.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.4.0_3abe4b25c26a75c8beba3e532c9b1fc5ce1c2ce9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="21d2de60155108d46384c7272d18d2eeca5075bf">
+        <dex dex="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\pre-dexed\debug\instant-run_bd6d1bb89014f2061edda9ffb56e472b13038e0b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.4.0_348c6427450bfd7d4db547ce3f5aa17dd23037e5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\pre-dexed\debug\internal_impl-23.4.0_8a6e175bb34283e465748eb7dcc5e45693cbbaa3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.4.0_ab6e4df5f43a5e8246b1b7f39cfa0ce808cda192.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3813e9f966603665120e0a65386a25ca1ae98706">
+        <dex dex="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_83df094c3d7af7119611578ef8649e632a852a28.jar" />
+    </item>
+
+</items>
