@@ -1,3 +1,28 @@
 <resources>
-    <string name="app_name">HousingMarket-Shop-Android</string>
+    <string name="app_name">宅集市</string>
+
+    <string name="tab_shipping">待配送</string>
+    <string name="shipping_top">宅集市</string>
+    <string name="tab_handled">已处理订单</string>
+    <string name="handled_top">订单管理</string>
+    <string name="tab_mine">我的</string>
+    <string name="mine_top">我的店铺</string>
+
+    <string name="exit_app">再按一次退出</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    //shipping页使用
+    <string name="target">距离今日目标仍需</string>
+    <string name="target1">单!</string>
+    <string name="order_num">18</string>
+    <string name="order_num_cn">号</string>
+    <string name="order_identifier">订单编号：</string>
+    <string name="order_identifier_text">20170213311</string>
+    <string name="order_time">下单时间：</string>
+    <string name="order_time_month">4</string>
+    <string name="order_time_month_cn">月</string>
+    <string name="order_time_day">25</string>
+    <string name="order_time_day_cn">日</string>
+    <string name="order_time_hours">22:00</string>
 </resources>
