@@ -3,7 +3,9 @@ package com.carlos.housingmarket_shop_android;
 import android.content.Context;
 import android.graphics.Color;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -39,6 +41,12 @@ public class MainActivity extends AppCompatActivity {
     private TextView textMine;
     private List<Fragment> list;
 
+    //fragment管理器
+    private FragmentManager fragmentManager;
+    // 3个fragment
+    private HandledFragment handledFragment;
+    private ShippingFragment shippingFragment;
+    private MineFragment mineFragment;
     //屏幕宽度
     private int screenWidth;
     private int currentPage = 0;
@@ -55,13 +63,94 @@ public class MainActivity extends AppCompatActivity {
 
         appManager = AppManager.getInstance();
         appManager.addActivity(this);
+        fragmentManager = getSupportFragmentManager();
         context = this;
+        tabShipping = (LinearLayout) findViewById(R.id.tabShipping);
+        tabHandled = (LinearLayout) findViewById(R.id.tabHandled);
+        tabMine = (LinearLayout) findViewById(R.id.tabMine);
+        imageShipping = (ImageView) findViewById(R.id.imageShipping);
+        imageHandled = (ImageView) findViewById(R.id.imageHandled);
+        imageMine = (ImageView) findViewById(R.id.imageMine);
+        textShipping = (TextView) findViewById(R.id.textShipping);
+        textHandled = (TextView) findViewById(R.id.textHandled);
+        textMine = (TextView) findViewById(R.id.textMine);
         UIUtil.steepToolBar(this);
       // 初始化界面
-        initView();
-        
+       // initView();
+        init();
+
     }
 
+    private void init() {
+        setChooseItem(0);
+        tabShipping.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setChooseItem(0);
+            }
+        });
+        tabHandled.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setChooseItem(1);
+            }
+        });
+        tabMine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setChooseItem(2);
+            }
+        });
+    }
+
+    public void setChooseItem(int index) {
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        clearChoose();
+        hideFragments(fragmentTransaction);
+        switch (index) {
+            case 0:
+                clearChoose();
+                textShipping.setTextColor(Color.BLACK);
+                imageShipping.setImageResource(R.mipmap.tab_shipping_checked);
+                //判断是否存在并创建或显示
+                if (shippingFragment == null) {
+                    // 如果shippingFragment为空，则创建一个并添加到界面上
+                    shippingFragment = new ShippingFragment();
+                    fragmentTransaction.add(R.id.main_framelayout, shippingFragment);
+                } else {
+                    fragmentTransaction.show(shippingFragment);
+                }
+                break;
+            case 1:
+                clearChoose();
+                textHandled.setTextColor(Color.BLACK);
+                imageHandled.setImageResource(R.mipmap.tab_handled_checked);
+                //判断是否存在并创建或显示
+                if (handledFragment == null) {
+                    // 如果handledFragment为空，则创建一个并添加到界面上
+                    handledFragment = new HandledFragment();
+                    fragmentTransaction.add(R.id.main_framelayout, handledFragment);
+                } else {
+                    fragmentTransaction.show(handledFragment);
+                }
+                break;
+            case 2:
+                clearChoose();
+                textMine.setTextColor(Color.BLACK);
+                imageMine.setImageResource(R.mipmap.tab_mine_checked);
+                //判断是否存在并创建或显示
+                if (mineFragment == null) {
+                    // 如果mineFragment为空，则创建一个并添加到界面上
+                    mineFragment = new MineFragment();
+                    fragmentTransaction.add(R.id.main_framelayout, mineFragment);
+                } else {
+                    fragmentTransaction.show(mineFragment);
+                }
+                break;
+        }
+        fragmentTransaction.commit();
+    }
+/*
     private void initView() {
         viewPager = (ViewPager) findViewById(R.id.id_viewpager);
         tabShipping = (LinearLayout) findViewById(R.id.tabShipping);
@@ -176,10 +265,26 @@ public class MainActivity extends AppCompatActivity {
     //手动设置ViewPager要显示的视图
     private void changeView(int desTab)
     {
-        viewPager.setCurrentItem(desTab, true);
+        viewPager.setCurrentItem(desTab, false);
     }
 
-    private void clearAll() {
+
+*/
+
+    //隐藏所有的Fragment,避免fragment混乱
+    private void hideFragments(FragmentTransaction fragmentTransaction) {
+        if (shippingFragment != null) {
+            fragmentTransaction.hide(shippingFragment);
+        }
+        if (handledFragment != null) {
+            fragmentTransaction.hide(handledFragment);
+        }
+        if (mineFragment != null) {
+            fragmentTransaction.hide(mineFragment);
+        }
+    }
+
+    private void clearChoose() {
         textShipping.setTextColor(Color.GRAY);
         textHandled.setTextColor(Color.GRAY);
         textMine.setTextColor(Color.GRAY);

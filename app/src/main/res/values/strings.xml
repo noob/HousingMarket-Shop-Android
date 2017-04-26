@@ -12,7 +12,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    //shipping页使用
+    <!--shipping页使用 -->
     <string name="target">距离今日目标仍需</string>
     <string name="target1">单!</string>
     <string name="order_num">18</string>
@@ -25,4 +25,28 @@
     <string name="order_time_day">25</string>
     <string name="order_time_day_cn">日</string>
     <string name="order_time_hours">22:00</string>
+    <string name="shipping_address">地址 ：</string>
+    <string name="shipping_address_demo">罗曼风情18单元108室</string>
+    <string name="shipping_name">史学伦</string>
+    <string name="shipping_colon"> ：</string>
+    <string name="shipping_phone">18768515510</string>
+    <string name="food_name">矿泉水</string>
+    <string name="food_x">x</string>
+    <string name="food_num">1</string>
+    <string name="food_cost">2</string>
+    <string name="food_cost_cn">元</string>
+    <string name="discount">优惠</string>
+    <string name="discount_cost">4</string>
+    <string name="paid">实付</string>
+    <string name="cut">-</string>
+    <string name="all_cost">4</string>
+    <string name="wait_shipping">待配送</string>
+    <string name="agree_shipping">同意配送</string>
+
+    <!-- handled中使用 -->
+    <string name="all_order">全部</string>
+    <string name="distribution">配送中</string>
+    <string name="finished">已完成</string>
+    <string name="refunds">退款</string>
+
 </resources>
