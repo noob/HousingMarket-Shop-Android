@@ -7,10 +7,15 @@
     <string name="handled_top">订单管理</string>
     <string name="tab_mine">我的</string>
     <string name="mine_top">我的店铺</string>
+    <string name="main_top">宅集市</string>
+    <string name="back_top">返回</string>
 
     <string name="exit_app">再按一次退出</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- 注册时使用 -->
+    <string name="phone_cn">请填写手机号码</string>
 
     <!--shipping页使用 -->
     <string name="target">距离今日目标仍需</string>
@@ -48,5 +53,18 @@
     <string name="distribution">配送中</string>
     <string name="finished">已完成</string>
     <string name="refunds">退款</string>
+
+
+    <!-- 我的 中使用 -->
+    <string name="mine_address">学院路-宁波大红鹰学院</string>
+    <string name="distribution_manage">配送管理</string>
+    <string name="shop_evaluation">店铺评价</string>
+    <string name="account_center">账户中心</string>
+    <string name="business_status">营业状态</string>
+    <string name="preferential_manage">优惠管理</string>
+    <string name="commodity_manage">商品管理</string>
+    <string name="business_announcement">商家公告</string>
+    <string name="system_settings">系统设置</string>
+    <string name="evaluation_five">/5</string>
 
 </resources>

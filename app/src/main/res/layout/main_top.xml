@@ -5,15 +5,16 @@
     android:background="@color/theme_color"
     android:layout_width="match_parent"
     android:gravity="center"
-    android:layout_height="40dp">
+    android:layout_height="50dp">
 
     <TextView
+        android:id="@+id/topText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/handled_top"
+        android:text="@string/main_top"
         android:textColor="@color/white"
         android:layout_gravity="center"
-        android:textSize="18sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         />
 

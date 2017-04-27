@@ -5,10 +5,6 @@ import android.os.Handler;
 import android.text.TextUtils;
 import android.widget.Toast;
 
-/**
- * Created by Dale'
- * On 2016/4/13.
- */
 public class T {
 
     private T() {

@@ -2,14 +2,10 @@ package com.carlos.housingmarket_shop_android;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
@@ -17,19 +13,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.carlos.housingmarket_shop_android.Handled.HandledFragment;
-import com.carlos.housingmarket_shop_android.Mine.MineFragment;
-import com.carlos.housingmarket_shop_android.Shipping.ShippingFragment;
 import com.carlos.housingmarket_shop_android.Use.manager.AppManager;
 import com.carlos.housingmarket_shop_android.Use.util.T;
 import com.carlos.housingmarket_shop_android.Use.util.UIUtil;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class MainActivity extends AppCompatActivity {
 
-    private ViewPager viewPager;
     private LinearLayout tabShipping;
     private LinearLayout tabHandled;
     private LinearLayout tabMine;
@@ -39,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
     private TextView textShipping;
     private TextView textHandled;
     private TextView textMine;
-    private List<Fragment> list;
 
     //fragment管理器
     private FragmentManager fragmentManager;
@@ -47,9 +35,6 @@ public class MainActivity extends AppCompatActivity {
     private HandledFragment handledFragment;
     private ShippingFragment shippingFragment;
     private MineFragment mineFragment;
-    //屏幕宽度
-    private int screenWidth;
-    private int currentPage = 0;
 
     private final static String TAG = "MainActivity";
     private Context context;

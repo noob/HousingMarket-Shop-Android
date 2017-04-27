@@ -1,22 +1,17 @@
-package com.carlos.housingmarket_shop_android.Handled;
+package com.carlos.housingmarket_shop_android;
 
-import android.content.Context;
-import android.graphics.Color;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.DisplayMetrics;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.astuetz.PagerSlidingTabStrip;
 import com.carlos.housingmarket_shop_android.BaseClass.BaseFragment;
 import com.carlos.housingmarket_shop_android.Handled.StatusFragment.AllOrderFragment;
 import com.carlos.housingmarket_shop_android.Handled.StatusFragment.DistributionFragment;
@@ -38,10 +33,11 @@ public class HandledFragment extends BaseFragment implements View.OnClickListene
     private DistributionFragment distributionFragment;
     private FinishedFragment finishedFragment;
     private RefundsFragment refundsFragment;
-    TextView allOrder;
-    TextView distribution;
-    TextView finished;
-    TextView refunds;
+    private TextView allOrder;
+    private TextView distribution;
+    private TextView finished;
+    private TextView refunds;
+    private TextView topText;
 
     /**
      * ViewPager的当前选中页
@@ -61,6 +57,14 @@ public class HandledFragment extends BaseFragment implements View.OnClickListene
         distribution = (TextView) view.findViewById(R.id.distribution);
         finished = (TextView) view.findViewById(R.id.finished);
         refunds = (TextView) view.findViewById(R.id.refunds);
+        topText = (TextView) view.findViewById(R.id.topText);
+
+        init();
+        return view;
+    }
+
+    private void init() {
+        topText.setText("订单管理");
         allOrder.setOnClickListener(this);
         distribution.setOnClickListener(this);
         finished.setOnClickListener(this);
@@ -115,7 +119,6 @@ public class HandledFragment extends BaseFragment implements View.OnClickListene
         });
         changeColor(0);
         viewPager.setCurrentItem(0);
-        return view;
     }
 
 
@@ -160,7 +163,7 @@ public class HandledFragment extends BaseFragment implements View.OnClickListene
     //手动设置ViewPager要显示的视图
     private void changeView(int desTab)
     {
-        viewPager.setCurrentItem(desTab, true);
+        viewPager.setCurrentItem(desTab, false);
     }
     private void changeColor(int position) {
         clearColor();

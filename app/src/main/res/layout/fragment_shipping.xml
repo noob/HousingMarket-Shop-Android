@@ -2,7 +2,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <include layout="@layout/shipping_top" />
+    <include layout="@layout/main_top" />
 
     <LinearLayout
         android:background="@color/white"

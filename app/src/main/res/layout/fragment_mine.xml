@@ -1,8 +1,438 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.carlos.housingmarket_shop_android.Mine.MineFragment">
+    android:orientation="vertical"
+    tools:context="com.carlos.housingmarket_shop_android.MineFragment">
 
-    <include layout="@layout/mine_top"/>
-</FrameLayout>
+    <include layout="@layout/main_top"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@color/gray_shipping"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/mine_image"
+                        android:layout_width="52dp"
+                        android:layout_height="55dp"
+                        android:src="@mipmap/mine_goods"/>
+
+                    <TextView
+                        android:layout_marginLeft="24dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:text="@string/mine_address"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="right|center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/to"
+                        android:id="@+id/imageView" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_shipping"/>
+
+            <LinearLayout
+                android:id="@+id/distributionManage"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@mipmap/mine_delivery" />
+
+                    <TextView
+                        android:layout_marginLeft="24dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:text="@string/distribution_manage"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="right|center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/to" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_shipping"/>
+
+            <LinearLayout
+                android:id="@+id/shopEvaluation"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/mine_open" />
+
+                    <TextView
+                        android:layout_marginLeft="24dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:text="@string/shop_evaluation"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="right|center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14dp"
+                        android:textColor="@color/some_gray"
+                        android:text="4.6"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14dp"
+                        android:textColor="@color/some_gray"
+                        android:text="@string/evaluation_five"/>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/to" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_shipping"/>
+            <View
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_shipping"/>
+
+            <LinearLayout
+                android:id="@+id/accountCenter"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@mipmap/mine_open" />
+
+                    <TextView
+                        android:layout_marginLeft="24dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:text="@string/account_center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="right|center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/to" />
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_marginLeft="70dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_shipping"/>
+
+            <LinearLayout
+                android:id="@+id/businessStatus"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@mipmap/select_uncheck" />
+
+                    <TextView
+                        android:layout_marginLeft="24dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:text="@string/business_status"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="right|center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/to" />
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_marginLeft="70dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_shipping"/>
+
+            <LinearLayout
+                android:id="@+id/preferentialManage"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@mipmap/mine_open" />
+
+                    <TextView
+                        android:layout_marginLeft="24dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:text="@string/preferential_manage"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="right|center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/to" />
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_marginLeft="70dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_shipping"/>
+
+            <LinearLayout
+                android:id="@+id/commodityManage"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@mipmap/mine_open" />
+
+                    <TextView
+                        android:layout_marginLeft="24dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:text="@string/commodity_manage"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="right|center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/to" />
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_marginLeft="70dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_shipping"/>
+
+            <LinearLayout
+                android:id="@+id/businessAnnouncement"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@mipmap/mine_open" />
+
+                    <TextView
+                        android:layout_marginLeft="24dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:text="@string/business_announcement"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="right|center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/to" />
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_marginLeft="70dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_shipping"/>
+            <LinearLayout
+                android:id="@+id/systemSettings"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@mipmap/orderdetail_activity" />
+
+                    <TextView
+                        android:layout_marginLeft="24dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:text="@string/system_settings"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="right|center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/to" />
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_shipping"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
