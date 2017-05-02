@@ -10,10 +10,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.carlos.housingmarket_shop_android.Mine.DistributionManage;
-import com.carlos.housingmarket_shop_android.Use.util.T;
+import com.carlos.housingmarket_shop_android.mine.DistributionManage;
 
 import butterknife.BindView;
 import butterknife.OnClick;

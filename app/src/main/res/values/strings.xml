@@ -24,7 +24,8 @@
     <string name="order_num_cn">号</string>
     <string name="order_identifier">订单编号：</string>
     <string name="order_identifier_text">20170213311</string>
-    <string name="order_time">下单时间：</string>
+    <string name="order_time_cn">下单时间：</string>
+    <string name="order_time">4月25日11:00</string>
     <string name="order_time_month">4</string>
     <string name="order_time_month_cn">月</string>
     <string name="order_time_day">25</string>

@@ -1,4 +1,4 @@
-package com.carlos.housingmarket_shop_android.Mine;
+package com.carlos.housingmarket_shop_android.mine;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -6,7 +6,7 @@ import android.view.KeyEvent;
 import android.widget.TextView;
 
 import com.carlos.housingmarket_shop_android.R;
-import com.carlos.housingmarket_shop_android.Use.manager.AppManager;
+import com.carlos.housingmarket_shop_android.use.manager.AppManager;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

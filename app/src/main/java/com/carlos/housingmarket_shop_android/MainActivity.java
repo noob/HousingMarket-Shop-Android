@@ -13,9 +13,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.carlos.housingmarket_shop_android.Use.manager.AppManager;
-import com.carlos.housingmarket_shop_android.Use.util.T;
-import com.carlos.housingmarket_shop_android.Use.util.UIUtil;
+import com.carlos.housingmarket_shop_android.use.manager.AppManager;
+import com.carlos.housingmarket_shop_android.use.util.T;
+import com.carlos.housingmarket_shop_android.use.util.UIUtil;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.carlos.housingmarket_shop_android.LoginFirst;
+package com.carlos.housingmarket_shop_android.loginFirst;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

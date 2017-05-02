@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.carlos.housingmarket_shop_android.Use.util;
+package com.carlos.housingmarket_shop_android.use.util;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;

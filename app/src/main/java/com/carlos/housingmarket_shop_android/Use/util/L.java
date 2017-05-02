@@ -1,4 +1,4 @@
-package com.carlos.housingmarket_shop_android.Use.util;
+package com.carlos.housingmarket_shop_android.use.util;
 
 import android.support.graphics.drawable.animated.BuildConfig;
 import android.util.Log;

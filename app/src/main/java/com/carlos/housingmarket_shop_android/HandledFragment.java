@@ -12,12 +12,11 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.carlos.housingmarket_shop_android.BaseClass.BaseFragment;
+import com.carlos.housingmarket_shop_android.baseClass.BaseFragment;
 import com.carlos.housingmarket_shop_android.Handled.StatusFragment.AllOrderFragment;
 import com.carlos.housingmarket_shop_android.Handled.StatusFragment.DistributionFragment;
 import com.carlos.housingmarket_shop_android.Handled.StatusFragment.FinishedFragment;
 import com.carlos.housingmarket_shop_android.Handled.StatusFragment.RefundsFragment;
-import com.carlos.housingmarket_shop_android.R;
 
 import java.util.ArrayList;
 import java.util.List;

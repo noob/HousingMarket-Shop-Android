@@ -4,14 +4,12 @@ package com.carlos.housingmarket_shop_android;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.carlos.housingmarket_shop_android.BaseClass.BaseFragment;
-import com.carlos.housingmarket_shop_android.R;
+import com.carlos.housingmarket_shop_android.baseClass.BaseFragment;
 
 public class ShippingFragment extends BaseFragment {
 
