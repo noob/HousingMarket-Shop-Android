@@ -16,6 +16,7 @@
 
     <!-- 注册时使用 -->
     <string name="phone_cn">请填写手机号码</string>
+    <string name="get_verification_code">获取验证码</string>
 
     <!--shipping页使用 -->
     <string name="target">距离今日目标仍需</string>
@@ -67,5 +68,6 @@
     <string name="business_announcement">商家公告</string>
     <string name="system_settings">系统设置</string>
     <string name="evaluation_five">/5</string>
+
 
 </resources>
