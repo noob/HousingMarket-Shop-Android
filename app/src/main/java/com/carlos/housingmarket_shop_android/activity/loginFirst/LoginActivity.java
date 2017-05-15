@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,6 +23,7 @@ import com.carlos.housingmarket_shop_android.activity.util.NO;
 import com.carlos.sxl.use.manager.AppManager;
 import com.carlos.sxl.use.util.L;
 import com.carlos.sxl.use.util.NetUtil;
+import com.carlos.sxl.use.util.SPPrivateUtil;
 import com.carlos.sxl.use.util.T;
 import com.carlos.sxl.use.util.Tools;
 
@@ -186,18 +188,28 @@ public class LoginActivity extends AppCompatActivity {
                         L.d(TAG + " result", result + "");
                         L.d(TAG + " event", event + "");
                         if (result == SMSSDK.RESULT_COMPLETE) {
-                            //短信注册成功后，返回MainActivity
-                            if (event == SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE) {   //提交验证码成功
-                                L.i(TAG, "验证成功");
-//                                activity.userLogin();
+                            boolean smart = (Boolean)data;
+                            if(smart) {
                                 activity.intent = new Intent(activity, MainActivity.class);
                                 activity.startActivity(activity.intent);
+                                SPPrivateUtil.put(activity.context,NO.isLogin,true);
                                 activity.exit();
-                            } else if (event == SMSSDK.EVENT_GET_VERIFICATION_CODE) {
-                                L.i(TAG, "验证码已经发送");
-                            } else if (event == SMSSDK.EVENT_GET_SUPPORTED_COUNTRIES) {   //返回支持发送验证码的国家列表
-                                L.i(TAG, "获取国家列表成功");
+                            } else {
+                                //短信注册成功后，返回MainActivity
+                                if (event == SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE) {   //提交验证码成功
+                                    L.i(TAG, "验证成功");
+//                                activity.userLogin();
+                                    activity.intent = new Intent(activity, MainActivity.class);
+                                    activity.startActivity(activity.intent);
+                                    SPPrivateUtil.put(activity.context,NO.isLogin,true);
+                                    activity.exit();
+                                } else if (event == SMSSDK.EVENT_GET_VERIFICATION_CODE) {
+                                    L.i(TAG, "验证码已经发送");
+                                } else if (event == SMSSDK.EVENT_GET_SUPPORTED_COUNTRIES) {   //返回支持发送验证码的国家列表
+                                    L.i(TAG, "获取国家列表成功");
+                                }
                             }
+
                         } else {
                             if (event == SMSSDK.EVENT_GET_VERIFICATION_CODE) {
                                 L.i(TAG, "获取验证码失败");

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_perfect_info"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/back_top"/>
+    <LinearLayout
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/shipping_padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:text="店铺名称"/>
+        <EditText
+            android:id="@+id/shopName"
+            android:textCursorDrawable="@null"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_shipping"
+        android:layout_marginLeft="15dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/shipping_padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:text="区域选择"/>
+        <EditText
+            android:textCursorDrawable="@null"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_shipping"
+        android:layout_marginLeft="15dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/shipping_padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:text="详细地址"/>
+        <EditText
+            android:textCursorDrawable="@null"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_shipping"
+        android:layout_marginLeft="15dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/shipping_padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:text="店铺类型"/>
+        <EditText
+            android:textCursorDrawable="@null"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_shipping"
+        android:layout_marginLeft="15dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/shipping_padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:text="姓名        "/>
+        <EditText
+            android:textCursorDrawable="@null"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_shipping"
+        android:layout_marginLeft="15dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/shipping_padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:text="手机        "/>
+        <EditText
+            android:textCursorDrawable="@null"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_shipping"
+
+
+
+        android:layout_marginLeft="15dp"/>
+
+
+</LinearLayout>

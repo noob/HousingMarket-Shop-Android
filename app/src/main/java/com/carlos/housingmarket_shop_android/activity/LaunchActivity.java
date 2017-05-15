@@ -7,6 +7,10 @@ import android.os.Bundle;
 
 import com.carlos.housingmarket_shop_android.R;
 import com.carlos.housingmarket_shop_android.activity.loginFirst.LoginActivity;
+import com.carlos.housingmarket_shop_android.activity.loginFirst.PerfectInfoActivity;
+import com.carlos.housingmarket_shop_android.activity.util.NO;
+import com.carlos.sxl.use.util.SPPrivateUtil;
+import com.carlos.sxl.use.util.T;
 
 public class LaunchActivity extends AppCompatActivity {
 
@@ -20,8 +24,13 @@ public class LaunchActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(LaunchActivity.this, LoginActivity.class));
-                LaunchActivity.this.finish();
+                if(SPPrivateUtil.getBoolean(LaunchActivity.this, NO.isLogin,false)){
+                    startActivity(new Intent(LaunchActivity.this, PerfectInfoActivity.class));
+                    LaunchActivity.this.finish();
+                }else {
+                    startActivity(new Intent(LaunchActivity.this, LoginActivity.class));
+                    LaunchActivity.this.finish();
+                }
             }
         }, time);
     }

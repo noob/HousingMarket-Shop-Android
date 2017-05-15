@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.carlos.housingmarket_shop_android.activity.MineFragment">
+    tools:fcContext="com.carlos.housingmarket_shop_android.activity.MineFragment">
 
     <include layout="@layout/main_top"/>
 
@@ -53,8 +53,7 @@
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"
-                        android:src="@mipmap/to"
-                        android:id="@+id/imageView" />
+                        android:src="@mipmap/to" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -346,7 +345,7 @@
                 android:background="@color/gray_shipping"/>
 
             <LinearLayout
-                android:id="@+id/businessAnnouncement"
+                android:id="@+id/businessPost"
                 android:background="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"

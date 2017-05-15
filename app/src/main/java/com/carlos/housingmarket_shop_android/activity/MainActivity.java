@@ -14,9 +14,12 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.carlos.housingmarket_shop_android.R;
+import com.carlos.housingmarket_shop_android.service.GeTuiService;
+import com.carlos.housingmarket_shop_android.service.GetService;
 import com.carlos.sxl.use.manager.AppManager;
 import com.carlos.sxl.use.util.T;
 import com.carlos.sxl.use.util.UIUtil;
+import com.igexin.sdk.PushManager;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -63,8 +66,16 @@ public class MainActivity extends AppCompatActivity {
         UIUtil.steepToolBar(this);
       // 初始化界面
        // initView();
+        initService();
         init();
 
+    }
+
+    private void initService() {
+        PushManager.getInstance().initialize(this.getApplicationContext(), GeTuiService.class);
+        // com.getui.demo.DemoIntentService 为第三方自定义的推送服务事件接收类
+        PushManager.getInstance().registerPushIntentService(this.getApplicationContext(), GetService.class);
+        GetService getService = new GetService();
     }
 
     private void init() {

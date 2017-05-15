@@ -12,6 +12,11 @@ android {
         versionName "1.0"
         multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [
+                GETUI_APP_ID : "7Ujuss3Oz67uqVrzmi9Yv8",
+                GETUI_APP_KEY : "8vZh4kUx9o80X3LPtgPl61",
+                GETUI_APP_SECRET : "lZqaVFvqHuAymZW4BK88D8"
+        ]
     }
     buildTypes {
         release {
@@ -36,6 +41,7 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
     compile 'com.android.support:recyclerview-v7:23.4.0'
     compile name:'SMSSDK-2.1.4',ext:'aar'
+    compile 'com.getui:sdk:2.10.2.0'
 
 }
 

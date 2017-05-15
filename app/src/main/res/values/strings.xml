@@ -68,6 +68,14 @@
     <string name="business_announcement">商家公告</string>
     <string name="system_settings">系统设置</string>
     <string name="evaluation_five">/5</string>
+    <string name="dist_cost_cn">配送费</string>
+    <string name="free_cost_cn">免配送费满足金额</string>
+    <string name="today_get">52.6</string>
+    <string name="all_get">7115.26</string>
+    <string name="week_get">526.1</string>
+    <string name="month_get">2456.1</string>
+    <string name="category_detail">全部</string>
+    <string name="food_category">食品零食</string>
 
 
 </resources>
