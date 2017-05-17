@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/activity_perfect_info"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
     <include layout="@layout/back_top"/>
     <LinearLayout
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:gravity="center"
@@ -27,7 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textSize="16sp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/gray_333"/>
 
     </LinearLayout>
     <View
@@ -48,13 +47,41 @@
             android:textSize="16sp"
             android:textColor="@color/black"
             android:text="区域选择"/>
-        <EditText
-            android:textCursorDrawable="@null"
-            android:background="@null"
+        <LinearLayout
+            android:id="@+id/address_select"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textSize="16sp"
-            android:textColor="@color/black"/>
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/address_province"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textSize="16sp"
+                android:textColor="@color/gray_333"
+                android:text="省"/>
+            <TextView
+                android:id="@+id/address_city"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textSize="16sp"
+                android:textColor="@color/gray_333"
+                android:text="市"/>
+            <TextView
+                android:id="@+id/address_country"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textSize="16sp"
+                android:textColor="@color/gray_333"
+                android:text="区（县）"/>
+
+        </LinearLayout>
+
     </LinearLayout>
 
     <View
@@ -75,13 +102,27 @@
             android:textSize="16sp"
             android:textColor="@color/black"
             android:text="详细地址"/>
-        <EditText
-            android:textCursorDrawable="@null"
-            android:background="@null"
+        <LinearLayout
+            android:id="@+id/detailAddressLy"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textSize="16sp"
-            android:textColor="@color/black"/>
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/detailAddress"
+                android:gravity="right|center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textSize="16sp"
+                android:textColor="@color/gray_333"
+                android:text="学院路-罗曼风情"/>
+            <ImageView
+                android:layout_gravity="right|center"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/to"/>
+
+        </LinearLayout>
     </LinearLayout>
 
     <View
@@ -102,13 +143,27 @@
             android:textSize="16sp"
             android:textColor="@color/black"
             android:text="店铺类型"/>
-        <EditText
-            android:textCursorDrawable="@null"
-            android:background="@null"
+        <LinearLayout
+            android:id="@+id/shopTypeLy"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textSize="16sp"
-            android:textColor="@color/black"/>
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/shopType"
+                android:gravity="right|center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textSize="16sp"
+                android:textColor="@color/gray_333"
+                android:text="水果店"/>
+            <ImageView
+                android:layout_gravity="right|center"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/to"/>
+
+        </LinearLayout>
     </LinearLayout>
 
     <View
@@ -130,12 +185,14 @@
             android:textColor="@color/black"
             android:text="姓名        "/>
         <EditText
+            android:id="@+id/ownerName"
             android:textCursorDrawable="@null"
             android:background="@null"
+            android:maxLines="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textSize="16sp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/gray_333" />
     </LinearLayout>
 
     <View
@@ -157,21 +214,23 @@
             android:textColor="@color/black"
             android:text="手机        "/>
         <EditText
+            android:id="@+id/ownerPhone"
             android:textCursorDrawable="@null"
             android:background="@null"
+            android:inputType="phone|number"
+            android:maxLength="11"
+            android:maxLines="1"
+            android:digits="1234567890"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textSize="16sp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/gray_333" />
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/gray_shipping"
-
-
-
         android:layout_marginLeft="15dp"/>
 
 

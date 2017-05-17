@@ -12,5 +12,15 @@ public class NO {
 
     public final static String isLogin = "isLogin";
 
+    //个人信息
+    public final static String shopName = "店铺名称";
+    public final static String province = "省";
+    public final static String city = "市";
+    public final static String country = "区（县）";
+    public final static String ownerName = "店主名字";
+    public final static String ownerPhone = "18888888888";
+    public final static String detailAdress = "";
+
+
 
 }

@@ -40,9 +40,10 @@ dependencies {
     compile 'com.jakewharton:butterknife:8.5.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
     compile 'com.android.support:recyclerview-v7:23.4.0'
-    compile name:'SMSSDK-2.1.4',ext:'aar'
+    compile name: 'SMSSDK-2.1.4', ext: 'aar'
     compile 'com.getui:sdk:2.10.2.0'
-
+    compile 'cn.qqtheme.framework:WheelPicker:1.5.2'
+    compile 'com.alibaba:fastjson:1.2.32'
 }
 
 repositories {
