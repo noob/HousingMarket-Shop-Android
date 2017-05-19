@@ -23,7 +23,6 @@ import com.carlos.housingmarket_shop_android.activity.util.NO;
 import com.carlos.sxl.use.manager.AppManager;
 import com.carlos.sxl.use.util.L;
 import com.carlos.sxl.use.util.NetUtil;
-import com.carlos.sxl.use.util.SPPrivateUtil;
 import com.carlos.sxl.use.util.T;
 import com.carlos.sxl.use.util.Tools;
 
@@ -188,20 +187,19 @@ public class LoginActivity extends AppCompatActivity {
                         L.d(TAG + " result", result + "");
                         L.d(TAG + " event", event + "");
                         if (result == SMSSDK.RESULT_COMPLETE) {
-                            boolean smart = (Boolean)data;
-                            if(smart) {
-                                activity.intent = new Intent(activity, MainActivity.class);
-                                activity.startActivity(activity.intent);
-                                SPPrivateUtil.put(activity.context,NO.isLogin,true);
-                                activity.exit();
+                            if(data instanceof Boolean) {
+                                if((Boolean)data) {
+                                    activity.intent = new Intent(activity, PerfectInfoActivity.class);
+                                    activity.startActivity(activity.intent);
+                                    activity.exit();
+                                }
                             } else {
                                 //短信注册成功后，返回MainActivity
                                 if (event == SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE) {   //提交验证码成功
                                     L.i(TAG, "验证成功");
 //                                activity.userLogin();
-                                    activity.intent = new Intent(activity, MainActivity.class);
+                                    activity.intent = new Intent(activity, PerfectInfoActivity.class);
                                     activity.startActivity(activity.intent);
-                                    SPPrivateUtil.put(activity.context,NO.isLogin,true);
                                     activity.exit();
                                 } else if (event == SMSSDK.EVENT_GET_VERIFICATION_CODE) {
                                     L.i(TAG, "验证码已经发送");

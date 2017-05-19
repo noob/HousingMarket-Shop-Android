@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.carlos.housingmarket_shop_android.R;
 import com.carlos.housingmarket_shop_android.activity.loginFirst.LoginActivity;
@@ -25,10 +26,10 @@ public class LaunchActivity extends AppCompatActivity {
             @Override
             public void run() {
                 if(SPPrivateUtil.getBoolean(LaunchActivity.this, NO.isLogin,false)){
-                    startActivity(new Intent(LaunchActivity.this, PerfectInfoActivity.class));
+                    startActivity(new Intent(LaunchActivity.this, MainActivity.class));
                     LaunchActivity.this.finish();
                 }else {
-                    startActivity(new Intent(LaunchActivity.this, PerfectInfoActivity.class));
+                    startActivity(new Intent(LaunchActivity.this, LoginActivity.class));
                     LaunchActivity.this.finish();
                 }
             }

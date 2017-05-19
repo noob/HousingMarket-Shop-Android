@@ -19,7 +19,9 @@ public class NO {
     public final static String country = "区（县）";
     public final static String ownerName = "店主名字";
     public final static String ownerPhone = "18888888888";
-    public final static String detailAdress = "";
+    public final static String detailAddress = "detailAddress";
+    public final static String businessLicenseImg = "businessLicenseImg";
+
 
 
 

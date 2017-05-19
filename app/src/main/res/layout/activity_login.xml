@@ -83,6 +83,9 @@
                     android:layout_width="0dp"
                     android:layout_weight="1.5"
                     android:layout_height="40dp"
+                    android:maxLength="4"
+                    android:maxLines="1"
+                    android:digits="1234567890"
                     />
                 <Button
                     android:id="@+id/verification_code_btn"

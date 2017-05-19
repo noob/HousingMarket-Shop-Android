@@ -1,7 +1,6 @@
 package com.carlos.housingmarket_shop_android.activity.loginFirst;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -18,16 +17,13 @@ import com.amap.api.maps.CameraUpdateFactory;
 import com.amap.api.maps.LocationSource;
 import com.amap.api.maps.MapView;
 import com.amap.api.maps.UiSettings;
-import com.amap.api.maps.model.BitmapDescriptorFactory;
 import com.amap.api.maps.model.LatLng;
 import com.amap.api.maps.model.Marker;
 import com.amap.api.maps.model.MarkerOptions;
-import com.amap.api.maps.model.MyLocationStyle;
 import com.carlos.housingmarket_shop_android.R;
 import com.carlos.housingmarket_shop_android.activity.util.NO;
 import com.carlos.sxl.use.manager.AppManager;
 import com.carlos.sxl.use.util.SPPrivateUtil;
-import com.carlos.sxl.use.util.T;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -170,7 +166,7 @@ public class DetailAddressActivity extends AppCompatActivity implements Location
                     //获取定位信息
                     StringBuffer buffer = new StringBuffer();
                     buffer.append(amapLocation.getDistrict() + "" + amapLocation.getStreet() + "" + amapLocation.getStreetNum());
-                    SPPrivateUtil.put(context, NO.detailAdress,buffer.toString());
+                    SPPrivateUtil.put(context, NO.detailAddress,buffer.toString());
                     isFirstLoc = false;
                 }
 
