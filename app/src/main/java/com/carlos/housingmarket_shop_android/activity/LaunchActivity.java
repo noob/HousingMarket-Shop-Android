@@ -4,14 +4,11 @@ import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 
 import com.carlos.housingmarket_shop_android.R;
 import com.carlos.housingmarket_shop_android.activity.loginFirst.LoginActivity;
-import com.carlos.housingmarket_shop_android.activity.loginFirst.PerfectInfoActivity;
-import com.carlos.housingmarket_shop_android.activity.util.NO;
+import com.carlos.housingmarket_shop_android.util.NO;
 import com.carlos.sxl.use.util.SPPrivateUtil;
-import com.carlos.sxl.use.util.T;
 
 public class LaunchActivity extends AppCompatActivity {
 

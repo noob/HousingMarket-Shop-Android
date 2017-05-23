@@ -12,21 +12,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="G:\Android\SDK\extras\android\m2repository\com\android\support\support-annotations\26.0.0-alpha1\support-annotations-26.0.0-alpha1.jar"
+        jar="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="023ee503b631f69511e335a061ea008f8da60f40">
-        <dex dex="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-26.0.0-alpha1_6060f5e1d609cc823c34f9bb23231bdce91ffab1\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\26.0.0-alpha1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
-        <dex dex="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-26.0.0-alpha1_064c852e56221ec2574f67b7dce83221662d4cec\classes.dex" />
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.4.0_3abe4b25c26a75c8beba3e532c9b1fc5ce1c2ce9\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -48,15 +39,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\26.0.0-alpha1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
-        <dex dex="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-26.0.0-alpha1_fd55f4903abeb853b85b1c576b915f5bc4824887\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\Carlos\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.7.0\9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4\glide-3.7.0.jar"
         jumboMode="true"
         optimize="true"
@@ -75,15 +57,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="7ca7162f0d092f063f82be53ef84a66f3033b2be">
-        <dex dex="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_83df094c3d7af7119611578ef8649e632a852a28\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\exploded-aar\com.getui\sdk\2.10.2.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -93,21 +66,30 @@
     </item>
     <item
         is-multidex="true"
+        jar="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.4.0_8a6e175bb34283e465748eb7dcc5e45693cbbaa3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="b06d59a275562e6103e39a3092e63d6e3ce3dfaa">
+        <dex dex="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_83df094c3d7af7119611578ef8649e632a852a28\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="6667ad3517dbc687ea068b7ce2a216d804869832">
+        sha1="62d1f6a432742ccff84ee8507f7b460598842512">
         <dex dex="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_bd6d1bb89014f2061edda9ffb56e472b13038e0b\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\exploded-aar\com.android.support\support-fragment\26.0.0-alpha1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
-        <dex dex="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-26.0.0-alpha1_e46f3a6fab9b949fccb4614e033564cde5ceb1bd\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -120,12 +102,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\26.0.0-alpha1\jars\classes.jar"
+        jar="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\exploded-aar\com.jakewharton\butterknife\8.5.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="9935891f23923f39d002087085d9696568a9f657">
-        <dex dex="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-26.0.0-alpha1_f9e9587b6e736d843c227a709183ac597afaebd1\classes.dex" />
+        sha1="19f281a785ca0eb5f6799fc7bf7ca199a9ca1e8b">
+        <dex dex="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.jakewharton-butterknife-8.5.1_56e6821102cdf0cb32a6bba31b23072613863626\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -135,15 +117,6 @@
         revision="23.0.3"
         sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
         <dex dex="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.4.0_9ee90123348936d9822f6cfc2a426161cb2ed9cb\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\exploded-aar\com.jakewharton\butterknife\8.5.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="19f281a785ca0eb5f6799fc7bf7ca199a9ca1e8b">
-        <dex dex="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.jakewharton-butterknife-8.5.1_56e6821102cdf0cb32a6bba31b23072613863626\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -174,21 +147,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
-        <dex dex="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.4.0_348c6427450bfd7d4db547ce3f5aa17dd23037e5\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="G:\GithubLibrary\HousingMarket-Shop-Android\app\libs\MobTools-2017.0321.1624.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
         sha1="242b3a8f9b6b47d2ea8cf932cd978a5b6651d22a">
         <dex dex="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\transforms\dex\debug\folders\1000\2\MobTools-2017.0321.1624_82b73dcf4ee22f7309fd93f9c461558f48c7bfed\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.4.0_348c6427450bfd7d4db547ce3f5aa17dd23037e5\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -201,21 +174,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\exploded-aar\com.android.support\support-v4\26.0.0-alpha1\jars\classes.jar"
+        jar="G:\Android\SDK\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-26.0.0-alpha1_764db9379d8a87a1a8b06e940a8cb63776de3d8d\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\exploded-aar\com.android.support\support-compat\26.0.0-alpha1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
-        <dex dex="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-26.0.0-alpha1_11e9e399296d4f1896c985dff837ea92137a291e\classes.dex" />
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.4.0_243d1fdede418e2be99e4cc44c5762cd464bcbe8\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -234,6 +198,15 @@
         revision="23.0.3"
         sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
         <dex dex="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-multidex-1.0.1_8d509edb630b5448eebd0c94884d7f251e62fb5b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Carlos\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.8.0\c4ba5371a29ac9b2ad6129b1d39ea38750043eff\gson-2.8.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c4ba5371a29ac9b2ad6129b1d39ea38750043eff">
+        <dex dex="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.8.0_38ca37c5f3e753db3dbc0dae556931f3af24fe50\classes.dex" />
     </item>
     <item
         is-multidex="true"

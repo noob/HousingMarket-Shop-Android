@@ -7,4 +7,15 @@
 
     <include layout="@layout/back_top"/>
 
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="200dp"
+        android:layout_height="100dp" />
+
+    <Button
+        android:text="连接"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:id="@+id/button" />
+
 </LinearLayout>

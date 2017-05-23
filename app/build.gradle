@@ -37,15 +37,20 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.4.0'
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:multidex:1.0.1'
-    compile 'com.jakewharton:butterknife:8.5.1'
+    compile ('com.jakewharton:butterknife:8.5.1'){
+        exclude group: 'com.android.support'
+    }
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
     compile 'com.android.support:recyclerview-v7:23.4.0'
     compile name: 'SMSSDK-2.1.4', ext: 'aar'
     compile 'com.getui:sdk:2.10.2.0'
-    compile 'cn.qqtheme.framework:WheelPicker:1.5.2'
+    compile ('cn.qqtheme.framework:WheelPicker:1.5.2'){
+        exclude group: 'com.android.support'
+    }
     compile 'com.alibaba:fastjson:1.2.32'
     compile 'com.yancy.imageselector:imageselector:1.3.3'
     compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile group: 'com.google.code.gson', name: 'gson', version: '2.8.0'
 }
 
 repositories {

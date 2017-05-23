@@ -15,7 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.carlos.housingmarket_shop_android.R;
-import com.carlos.housingmarket_shop_android.activity.adapter.RecyclerViewAdapter;
+import com.carlos.housingmarket_shop_android.activity.adapter.OderInfoAdapter;
 
 import java.lang.ref.WeakReference;
 
@@ -33,7 +33,7 @@ public class AllOrderFragment extends Fragment {
     boolean isLoading;
     private int[] data = new int[10];
     private Context context;
-    private RecyclerViewAdapter adapter;
+    private OderInfoAdapter adapter;
     private MyHandler myHandler;
 
     public AllOrderFragment() {
@@ -80,7 +80,7 @@ public class AllOrderFragment extends Fragment {
 
         });
 
-        adapter = new RecyclerViewAdapter(context,data);
+        adapter = new OderInfoAdapter(context,data);
         final LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         allOrderRecy.setLayoutManager(layoutManager);
         allOrderRecy.setAdapter(adapter);
@@ -121,7 +121,7 @@ public class AllOrderFragment extends Fragment {
         });
 
         //添加点击事件
-        adapter.setOnItemClickListener(new RecyclerViewAdapter.OnItemClickListener() {
+        adapter.setOnItemClickListener(new OderInfoAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
                 Log.d("test", "item position = " + position);

@@ -12,10 +12,14 @@ import android.widget.TextView;
 import com.carlos.housingmarket_shop_android.R;
 import com.carlos.housingmarket_shop_android.activity.adapter.FoodCategoryAdapter;
 import com.carlos.housingmarket_shop_android.activity.adapter.GalleryAdapter;
+import com.carlos.housingmarket_shop_android.util.NO;
 import com.carlos.sxl.use.manager.AppManager;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -32,11 +36,17 @@ public class CommodityManage extends AppCompatActivity {
     RecyclerView categoryDetail;
     @BindView(R.id.food_category)
     RecyclerView foodCategory;
+    @BindView(R.id.commodity_list)
+    RecyclerView commodityList;
     private AppManager mam = null; // Activity 管理器
     private GalleryAdapter mAdapter;
     private FoodCategoryAdapter fcAdapter;
     private List<String> mDatas;
     private List<String> fcDatas;
+    private List<String> spDatas;
+    private List<String> nnDatas;
+    private List<List> lists;
+    private Map<String,List<String>> map;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,16 +68,33 @@ public class CommodityManage extends AppCompatActivity {
     }
 
     private void initDatas() {
-        mDatas = new ArrayList<>();
+        lists = new ArrayList<>();
         fcDatas = new ArrayList<>();
-        mDatas.add("全部");
-        mDatas.add("茶饮料");
-        mDatas.add("纯净水");
+        spDatas = new ArrayList<>();
+        mDatas = new ArrayList<>();
+        nnDatas = new ArrayList<>();
         fcDatas.add("食品零食");
         fcDatas.add("饮料类");
         fcDatas.add("牛奶酸奶");
-        fcDatas.add("酒品类");
-        fcDatas.add("家庭清洁");
+        spDatas.add("全部");
+        spDatas.add("食品1");
+        spDatas.add("食品2");
+        mDatas.add("全部");
+        mDatas.add("茶饮料");
+        mDatas.add("纯净水");
+        nnDatas.add("全部");
+        nnDatas.add("酸奶1");
+        nnDatas.add("酸奶2");
+        nnDatas.add("酸奶3");
+        lists.add(spDatas);
+        lists.add(mDatas);
+        lists.add(nnDatas);
+
+        map = new HashMap<>();
+        for(int i=0;i<fcDatas.size();i++) {
+                map.put(fcDatas.get(i),lists.get(i));
+        }
+
     }
 
     //食品二级详细分类
@@ -89,6 +116,16 @@ public class CommodityManage extends AppCompatActivity {
         foodCategory.setLayoutManager(linearLayoutManager);
         //设置适配器
         fcAdapter = new FoodCategoryAdapter(this, fcDatas);
+
+        fcAdapter.setA(new FoodCategoryAdapter.A() {
+            @Override
+            public void onClick(View view, int position) {
+
+                mAdapter = new GalleryAdapter(CommodityManage.this, map.get( fcDatas.get(position)));
+                categoryDetail.setAdapter(mAdapter);
+            }
+
+        });
         foodCategory.setAdapter(fcAdapter);
     }
 

@@ -10,7 +10,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,8 +17,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.carlos.housingmarket_shop_android.R;
-import com.carlos.housingmarket_shop_android.activity.MainActivity;
-import com.carlos.housingmarket_shop_android.activity.util.NO;
+import com.carlos.housingmarket_shop_android.util.NO;
 import com.carlos.sxl.use.manager.AppManager;
 import com.carlos.sxl.use.util.L;
 import com.carlos.sxl.use.util.NetUtil;

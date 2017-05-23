@@ -21,7 +21,7 @@ import com.amap.api.maps.model.LatLng;
 import com.amap.api.maps.model.Marker;
 import com.amap.api.maps.model.MarkerOptions;
 import com.carlos.housingmarket_shop_android.R;
-import com.carlos.housingmarket_shop_android.activity.util.NO;
+import com.carlos.housingmarket_shop_android.util.NO;
 import com.carlos.sxl.use.manager.AppManager;
 import com.carlos.sxl.use.util.SPPrivateUtil;
 

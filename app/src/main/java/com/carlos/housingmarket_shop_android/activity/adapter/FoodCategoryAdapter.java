@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.carlos.housingmarket_shop_android.R;
+import com.carlos.housingmarket_shop_android.activity.mine.CommodityManage;
 import com.carlos.sxl.use.util.T;
 
 import java.util.List;
@@ -23,6 +24,16 @@ public class FoodCategoryAdapter extends RecyclerView.Adapter<FoodCategoryAdapte
     private LayoutInflater mInflater;
     private List<String> fcDatas;
     private Context fcContext;
+
+    private A a;
+
+    public void setA(A a) {
+        this.a = a;
+    }
+
+    public interface A{
+        void onClick(View view,int position);
+    }
 
     public FoodCategoryAdapter(Context fcContext, List<String> datas) {
         mInflater = LayoutInflater.from(fcContext);
@@ -44,6 +55,7 @@ public class FoodCategoryAdapter extends RecyclerView.Adapter<FoodCategoryAdapte
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                a.onClick(v,position);
                 T.showShort(fcContext,fcDatas.get(position));
             }
         });
