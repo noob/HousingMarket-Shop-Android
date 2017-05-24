@@ -2,6 +2,7 @@ package com.carlos.housingmarket_shop_android.activity.mine;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.KeyEvent;
@@ -10,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.carlos.housingmarket_shop_android.R;
+import com.carlos.housingmarket_shop_android.activity.adapter.CommodityAdapter;
 import com.carlos.housingmarket_shop_android.activity.adapter.FoodCategoryAdapter;
 import com.carlos.housingmarket_shop_android.activity.adapter.GalleryAdapter;
 import com.carlos.housingmarket_shop_android.util.NO;
@@ -41,6 +43,7 @@ public class CommodityManage extends AppCompatActivity {
     private AppManager mam = null; // Activity 管理器
     private GalleryAdapter mAdapter;
     private FoodCategoryAdapter fcAdapter;
+    private CommodityAdapter commodityAdapter;
     private List<String> mDatas;
     private List<String> fcDatas;
     private List<String> spDatas;
@@ -60,11 +63,19 @@ public class CommodityManage extends AppCompatActivity {
         initDatas();
         initDetailAp();
         initFoodAp();
+        initCommodity();
     }
-
 
     private void init() {
         manageTopText.setText("商品管理");
+    }
+
+
+    private void initCommodity() {
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this,3);
+        commodityList.setLayoutManager(gridLayoutManager);
+        commodityAdapter = new CommodityAdapter(this,fcDatas);
+        commodityList.setAdapter(commodityAdapter);
     }
 
     private void initDatas() {

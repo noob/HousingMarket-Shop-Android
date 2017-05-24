@@ -16,7 +16,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.galleryViewHolder> {
+public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.GalleryViewHolder> {
 
 
 
@@ -43,10 +43,10 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.galleryV
      * 创建ViewHolder
      */
     @Override
-    public galleryViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
+    public GalleryViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View view = mInflater.inflate(R.layout.category_detil_item,
                 viewGroup, false);
-        galleryViewHolder galleryViewHolder = new galleryViewHolder(view);
+        GalleryViewHolder galleryViewHolder = new GalleryViewHolder(view);
 
         return galleryViewHolder;
     }
@@ -55,8 +55,8 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.galleryV
      * 设置值
      */
     @Override
-    public void onBindViewHolder(final galleryViewHolder galleryViewHolder, final int i) {
-        // galleryViewHolder.mImg.setImageResource(mDatas.get(i));
+    public void onBindViewHolder(final GalleryViewHolder galleryViewHolder, final int i) {
+        // GalleryViewHolder.mImg.setImageResource(mDatas.get(i));
         galleryViewHolder.categoryDetailText.setText(mDatas.get(i));
         galleryViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,10 +66,10 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.galleryV
         });
     }
 
-    public class galleryViewHolder extends RecyclerView.ViewHolder {
+    public class GalleryViewHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.category_detail_text)
         TextView categoryDetailText;
-        public galleryViewHolder(View view) {
+        public GalleryViewHolder(View view) {
             super(view);
             ButterKnife.bind(this, view);
         }
