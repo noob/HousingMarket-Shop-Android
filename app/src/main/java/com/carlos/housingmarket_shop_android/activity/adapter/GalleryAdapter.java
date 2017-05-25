@@ -14,15 +14,17 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
-public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.GalleryViewHolder> {
+public class GalleryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
 
 
     private LayoutInflater mInflater;
     private List<String> mDatas;
     private Context context;
+    //两个final int类型表示ViewType的两种类型
+    private static final int TYPE_ITEM = 0;
+    private static final int TYPE_FOOTER = 1;
 
     public GalleryAdapter(Context context, List<String> datas) {
         mInflater = LayoutInflater.from(context);
@@ -30,48 +32,100 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.GalleryV
         this.context = context;
     }
 
-    @OnClick(R.id.category_detail_text)
-    public void onClick() {
+    @Override
+    public int getItemViewType(int position) {
+        if (position == getItemCount() - 1) {
+            return TYPE_FOOTER;
+        }
+        return TYPE_ITEM;
     }
 
     @Override
     public int getItemCount() {
-        return mDatas.size();
+        return mDatas.size() == 0 ? 0 : mDatas.size() + 1;
     }
 
     /**
      * 创建ViewHolder
      */
     @Override
-    public GalleryViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        View view = mInflater.inflate(R.layout.category_detil_item,
-                viewGroup, false);
-        GalleryViewHolder galleryViewHolder = new GalleryViewHolder(view);
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
 
-        return galleryViewHolder;
+        if (viewType == TYPE_ITEM) {
+            View view = LayoutInflater.from(context).inflate(R.layout.category_detail_item, viewGroup,
+                    false);
+            return new ItemViewHolder(view);
+        } else if (viewType == TYPE_FOOTER) {
+            View view = LayoutInflater.from(context).inflate(R.layout.category_detail_foot, viewGroup,
+                    false);
+            return new FootViewHolder(view);
+        }
+        return null;
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(View view, int position);
+        void onFootClick(View view, int position);
+
+    }
+
+    private OnItemClickListener onItemClickListener;
+
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
     }
 
     /**
      * 设置值
      */
     @Override
-    public void onBindViewHolder(final GalleryViewHolder galleryViewHolder, final int i) {
-        // GalleryViewHolder.mImg.setImageResource(mDatas.get(i));
-        galleryViewHolder.categoryDetailText.setText(mDatas.get(i));
-        galleryViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                T.showShort(context,mDatas.get(i));
+    public void onBindViewHolder(final RecyclerView.ViewHolder viewHolder, final int i) {
+        // ItemViewHolder.mImg.setImageResource(mDatas.get(i));
+//        itemViewHolder.categoryDetailText.setText(mDatas.get(i));
+//        itemViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                T.showShort(context,mDatas.get(i));
+//            }
+//        });
+        if (viewHolder instanceof ItemViewHolder) {
+            ( (ItemViewHolder) viewHolder).categoryDetailText.setText(mDatas.get(i));
+            if (onItemClickListener != null) {
+                viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        int position = viewHolder.getLayoutPosition();
+                        onItemClickListener.onItemClick(viewHolder.itemView, position);
+                    }
+                });
             }
-        });
+        }else if (viewHolder instanceof FootViewHolder) {
+            if (onItemClickListener != null) {
+                viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        int position = viewHolder.getLayoutPosition();
+                        onItemClickListener.onFootClick(viewHolder.itemView, position);
+                    }
+                });
+            }
+        }
+
     }
 
-    public class GalleryViewHolder extends RecyclerView.ViewHolder {
+    public class ItemViewHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.category_detail_text)
         TextView categoryDetailText;
-        public GalleryViewHolder(View view) {
+        public ItemViewHolder(View view) {
             super(view);
             ButterKnife.bind(this, view);
+        }
+    }
+
+    public class FootViewHolder extends RecyclerView.ViewHolder {
+
+        public FootViewHolder(View itemView) {
+            super(itemView);
         }
     }
 

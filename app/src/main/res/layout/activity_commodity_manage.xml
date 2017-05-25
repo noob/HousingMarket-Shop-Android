@@ -23,13 +23,15 @@
                 android:layout_height="wrap_content">
 
             </android.support.v7.widget.RecyclerView>
+
             <Button
                 android:background="@drawable/button_theme_color"
                 android:layout_width="70dp"
                 android:layout_height="20dp"
                 android:textColor="@color/white"
                 android:textSize="12sp"
-                android:text="编辑分类"/>
+                android:text="编辑分类"
+                android:id="@+id/button2" />
         </LinearLayout>
         <LinearLayout
             android:background="@color/gray_shipping"
@@ -37,30 +39,33 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
             <LinearLayout
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
                 android:orientation="horizontal">
+
                 <android.support.v7.widget.RecyclerView
+                    android:layout_gravity="center"
                     android:id="@+id/category_detail"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                 </android.support.v7.widget.RecyclerView>
+
             </LinearLayout>
             <LinearLayout
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/commodity_list"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
+
                 </android.support.v7.widget.RecyclerView>
+
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

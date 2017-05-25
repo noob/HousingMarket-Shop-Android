@@ -142,7 +142,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="69b7b8d0a87df369ae5a1031e17678a06f1fe83f">
+        sha1="1d86f858228195867cda9e144cb7cc4f35a2b6d5">
         <dex dex="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_83df094c3d7af7119611578ef8649e632a852a28\classes.dex" />
     </item>
     <item
@@ -169,7 +169,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="7fe919a53eb245991d04dd4d0bde53fdeb43287f">
+        sha1="3440b467d661638b24cc069f8c6bed9ec63a6456">
         <dex dex="G:\GithubLibrary\HousingMarket-Shop-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_bd6d1bb89014f2061edda9ffb56e472b13038e0b\classes.dex" />
     </item>
     <item

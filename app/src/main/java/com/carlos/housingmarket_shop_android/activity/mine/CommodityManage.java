@@ -1,5 +1,6 @@
 package com.carlos.housingmarket_shop_android.activity.mine;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
@@ -16,6 +17,7 @@ import com.carlos.housingmarket_shop_android.activity.adapter.FoodCategoryAdapte
 import com.carlos.housingmarket_shop_android.activity.adapter.GalleryAdapter;
 import com.carlos.housingmarket_shop_android.util.NO;
 import com.carlos.sxl.use.manager.AppManager;
+import com.carlos.sxl.use.util.T;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -50,6 +52,7 @@ public class CommodityManage extends AppCompatActivity {
     private List<String> nnDatas;
     private List<List> lists;
     private Map<String,List<String>> map;
+    private Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +62,7 @@ public class CommodityManage extends AppCompatActivity {
 
         mam = AppManager.getInstance();
         mam.addActivity(this);
+        context = CommodityManage.this;
         init();
         initDatas();
         initDetailAp();
@@ -74,7 +78,20 @@ public class CommodityManage extends AppCompatActivity {
     private void initCommodity() {
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this,3);
         commodityList.setLayoutManager(gridLayoutManager);
-        commodityAdapter = new CommodityAdapter(this,fcDatas);
+        commodityAdapter = new CommodityAdapter(this,nnDatas);
+        commodityAdapter.setOnItemClickListener(new CommodityAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                T.showShort(context,position + "item*");
+            }
+
+            @Override
+            public void onFootClick(View view, int position) {
+                T.showShort(context,position + "foot*");
+                nnDatas.add("New");
+                commodityAdapter.notifyDataSetChanged();
+            }
+        });
         commodityList.setAdapter(commodityAdapter);
     }
 
@@ -97,6 +114,7 @@ public class CommodityManage extends AppCompatActivity {
         nnDatas.add("酸奶1");
         nnDatas.add("酸奶2");
         nnDatas.add("酸奶3");
+        nnDatas.add("酸奶4");
         lists.add(spDatas);
         lists.add(mDatas);
         lists.add(nnDatas);
@@ -116,6 +134,17 @@ public class CommodityManage extends AppCompatActivity {
         categoryDetail.setLayoutManager(linearLayoutManager);
         //设置适配器
         mAdapter = new GalleryAdapter(this, mDatas);
+        mAdapter.setOnItemClickListener(new GalleryAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                T.showShort(context,position + mDatas.get(position));
+            }
+
+            @Override
+            public void onFootClick(View view, int position) {
+                T.showShort(context,position + "foot*");
+            }
+        });
         categoryDetail.setAdapter(mAdapter);
     }
 
@@ -132,7 +161,19 @@ public class CommodityManage extends AppCompatActivity {
             @Override
             public void onClick(View view, int position) {
 
-                mAdapter = new GalleryAdapter(CommodityManage.this, map.get( fcDatas.get(position)));
+                final List<String> datas = map.get( fcDatas.get(position));
+                mAdapter = new GalleryAdapter(CommodityManage.this,datas );
+                mAdapter.setOnItemClickListener(new GalleryAdapter.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(View view, int position) {
+                        T.showShort(context,position + datas.get(position));
+                    }
+
+                    @Override
+                    public void onFootClick(View view, int position) {
+                        T.showShort(context,position + "foot*");
+                    }
+                });
                 categoryDetail.setAdapter(mAdapter);
             }
 
